@@ -1,0 +1,7 @@
+{
+ "SiteName": "https://store.steampowered.com/",
+ "BrowserName": "chrome",
+ "OutputPath": "../",
+ "Language": "ru",
+ "LocalizationPath": "..\\..\\..\\"
+}

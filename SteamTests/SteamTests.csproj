@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BrowserMetrics\**" />
+    <Compile Remove="Crashpad\**" />
+    <Compile Remove="Default\**" />
+    <Compile Remove="ShaderCache\**" />
+    <EmbeddedResource Remove="BrowserMetrics\**" />
+    <EmbeddedResource Remove="Crashpad\**" />
+    <EmbeddedResource Remove="Default\**" />
+    <EmbeddedResource Remove="ShaderCache\**" />
+    <None Remove="BrowserMetrics\**" />
+    <None Remove="Crashpad\**" />
+    <None Remove="Default\**" />
+    <None Remove="ShaderCache\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="chrome_debug.log" />
+    <None Remove="CrashpadMetrics-active.pma" />
+    <None Remove="First Run" />
+    <None Remove="Last Browser" />
+    <None Remove="Last Version" />
+    <None Remove="Local State" />
+    <None Remove="Module Info Cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="80.0.3987.10600" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.26.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestFramework\TestFramework.csproj" />
+  </ItemGroup>
+
+</Project>
